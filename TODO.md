@@ -12,3 +12,11 @@
 
 
         ### DONE
+
+
+        ### BUGS
+
+
+        ### NOTES
+        Inspired by [this](titanapps.io) website.
+        ```
