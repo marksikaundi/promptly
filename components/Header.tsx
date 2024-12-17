@@ -43,22 +43,22 @@ export default function Header() {
           </div>
           <div className="flex items-center gap-4">
             <Link
-              href="/premium"
-              className="text-white/80 hover:text-white hidden md:block"
+              href="#login"
+              className="text-white/80 hover:text-white hidden md:block mr-8"
             >
-              Premium
+              Login
             </Link>
-            <Link
+            {/* <Link
               href="https://wa.me/+260776578583"
               className="hidden md:inline-flex h-9 items-center justify-center rounded-md border border-white  px-4 text-sm text-white"
             >
               Talk to us
-            </Link>
+            </Link> */}
             <Link
-              href="#"
+              href="#free"
               className="inline-flex h-9 items-center justify-center rounded-md bg-white px-4 text-sm font-medium text-[#2D1537] hover:bg-white/90"
             >
-              Register
+              Try for Free
             </Link>
           </div>
         </nav>
