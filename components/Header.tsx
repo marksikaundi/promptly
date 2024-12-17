@@ -58,7 +58,7 @@ export default function Header() {
               href="#"
               className="inline-flex h-9 items-center justify-center rounded-md bg-white px-4 text-sm font-medium text-[#2D1537] hover:bg-white/90"
             >
-              Mentorship
+              Register
             </Link>
           </div>
         </nav>
