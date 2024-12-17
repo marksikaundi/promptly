@@ -17,28 +17,30 @@ export default function Header() {
               /> */}
               <h1 className="text-xl font-bold text-white">Promptly</h1>
             </Link>
-            <div className="hidden md:flex items-center gap-6">
-              <Link href="/programs" className="text-white/80 hover:text-white">
-                Programs
+            <div className="hidden md:flex items-center gap-6 ml-28">
+              <Link href="#" className="text-white/80 hover:text-white">
+                Solutions
               </Link>
               <Link
-                href="/challenges/frontend"
+                href="#"
                 className="text-white/80 hover:text-white"
               >
-                Challenges
+                Products
               </Link>
               <Link
-                href="/resources"
+                href="#"
+                className="text-white/80 hover:text-white"
+              >
+                Pricing
+              </Link>
+
+              <Link
+                href="#"
                 className="text-white/80 hover:text-white"
               >
                 Resources
               </Link>
-              <Link
-                href="/contributing"
-                className="text-white/80 hover:text-white"
-              >
-                Contributing
-              </Link>
+             
             </div>
           </div>
           <div className="flex items-center gap-4">
