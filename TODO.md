@@ -9,6 +9,7 @@
         - AUTHENTICATION
 
         ### IN PROGRESS
+        - Landing page
 
 
         ### DONE
