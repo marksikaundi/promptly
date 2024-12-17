@@ -44,12 +44,14 @@ export default function Header() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Link
+            {/* <Link
               href="#login"
-              className="text-white/80 hover:text-white hidden md:block mr-8"
+              className="text-white/80 hover:text-white hidden md:block  font-semibold"
             >
               Login
-            </Link>
+            </Link> */}
+
+            
             {/* <Link
               href="https://wa.me/+260776578583"
               className="hidden md:inline-flex h-9 items-center justify-center rounded-md border border-white  px-4 text-sm text-white"
@@ -58,7 +60,7 @@ export default function Header() {
             </Link> */}
             <Link
               href="#free"
-              className="inline-flex h-9 items-center justify-center rounded-md bg-white px-4 text-sm font-medium text-[#2D1537] hover:bg-white/90"
+              className="inline-flex font-semibold  h-9 items-center justify-center rounded-md bg-white px-4 text-sm text-[#2D1537] hover:bg-white/90"
             >
               Try for Free
             </Link>
