@@ -1,18 +1,17 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
     <div className="relative h-screen flex items-center justify-center">
       {/* Background Image */}
-      <Image
+      {/* <Image
         src="/placeholder.svg?height=1080&width=1920"
         alt="Hero background"
         layout="fill"
         objectFit="cover"
         quality={100}
         className="z-0"
-      />
+      /> */}
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-white opacity-50 z-10"></div>
