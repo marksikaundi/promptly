@@ -1,96 +1,118 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Facebook, Linkedin, Twitter, Youtube } from 'lucide-react'
+"use client";
+import Link from "next/link";
+import { Button } from "./ui/button";
+import { FaLinkedin } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FcDonate } from "react-icons/fc";
+
+const footerData = [
+  {
+    title: "Company",
+    links: [
+      { name: "About us", path: "/about-us" },
+      { name: "Terms", path: "/terms" },
+      { name: "Privacy Policy", path: "/privacy-policy" },
+      { name: "FAQ", path: "/faq" },
+    ],
+  },
+  {
+    title: "Links",
+    links: [
+      { name: "Challenge", path: "" },
+      { name: "Affiliates", path: "" },
+      { name: "Partner with Us", path: "" },
+      { name: "Research", path: "" },
+      { name: "Publications", path: "" },
+      { name: "Changelog", path: "" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { name: "Web Editor", path: "" },
+      { name: "Sitemap", path: "" },
+      { name: "Tips", path: "" },
+      { name: "Projects", path: "" },
+      { name: "Docs", path: "" },
+    ],
+  },
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2E0D8A] text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <Image
-                src="/placeholder.svg"
-                alt="TitanApps"
-                width={32}
-                height={32}
-                className="w-8 h-8"
-              />
-              <span className="text-xl font-semibold">TitanApps</span>
+    <div className="pt-28">
+      <footer className="bg-[#2D1537] p-10 text-white">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-10 md:grid-cols-4">
+          {footerData.map((section, index) => (
+            <div key={index}>
+              <h5 className="mb-4 font-bold">{section.title}</h5>
+              <ul className="space-y-3">
+                {section.links.map((link, idx) => (
+                  <li key={idx}>
+                    {/* Use Link for internal paths */}
+                    {link.path.startsWith("http") ? (
+                      <a
+                        href={link.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link href={link.path}>{link.name}</Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <p className="text-sm text-gray-300">
-              TitanApps is a set of productivity tools for project management platforms designed for professional teams to move projects forward
-            </p>
-          </div>
+          ))}
 
-          {/* Tools for Jira */}
+          {/* Support */}
           <div>
-            <h3 className="font-semibold mb-4">Tools for Jira</h3>
-            <ul className="space-y-2">
-              <li><Link href="#" className="text-sm hover:text-gray-300">Smart Checklist</Link></li>
-              <li><Link href="#" className="text-sm hover:text-gray-300">Smart Template</Link></li>
-            </ul>
-          </div>
-
-          {/* Tools for monday.com */}
-          <div>
-            <h3 className="font-semibold mb-4">Tools for monday.com</h3>
-            <ul className="space-y-2">
-              <li><Link href="#" className="text-sm hover:text-gray-300">Smart Checklist</Link></li>
-              <li><Link href="#" className="text-sm hover:text-gray-300">Smart Template</Link></li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li><Link href="#" className="text-sm hover:text-gray-300">Blog</Link></li>
-              <li><Link href="#" className="text-sm hover:text-gray-300">Documentation</Link></li>
-              <li><Link href="#" className="text-sm hover:text-gray-300">Support</Link></li>
-              <li><Link href="#" className="text-sm hover:text-gray-300">Sales Dashboard</Link></li>
-              <li><Link href="#" className="text-sm hover:text-gray-300">Careers-Railsware hiring</Link></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><Link href="#" className="text-sm hover:text-gray-300">Contact Us</Link></li>
-              <li><Link href="#" className="text-sm hover:text-gray-300">Partner Program</Link></li>
-              <li><Link href="#" className="text-sm hover:text-gray-300">Privacy Policy</Link></li>
-              <li><Link href="#" className="text-sm hover:text-gray-300">Terms of Service</Link></li>
-              <li><Link href="#" className="text-sm hover:text-gray-300">Cookie Policy</Link></li>
-              <li><Link href="#" className="text-sm hover:text-gray-300">DPA</Link></li>
-            </ul>
+            <h5 className="mb-4 font-bold">Support us</h5>
+            <div className="mt-8">
+              <Button className="bg-[#F3A833] hover:bg-[#F3A833]">
+                <FcDonate className="mr-2" />
+                Donate
+              </Button>
+            </div>
+            <div className="pt-5">
+              <Button className="border border-[#F3A833] ">
+                <Link href="/careers" className="p-2">
+                  Careers
+                </Link>
+                <span className="relative flex h-4 w-4">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+                </span>
+              </Button>
+            </div>
           </div>
         </div>
+        <div className="mt-10 flex flex-col items-center justify-between border-t border-gray-600 py-6 md:flex-row">
+          <div className="flex items-center space-x-4">
+            <Link href="https://facebook.com/lupleg">
+              <FaFacebookSquare className="text-white" />
+            </Link>
 
-        {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center mt-12 pt-8 border-t border-gray-700">
-          <div className="flex items-center gap-4 mb-4 md:mb-0">
-            <span className="text-sm">TitanApps all rights reserved</span>
-            <span className="text-sm">Railsware Products Studio LLC</span>
+            <Link href="https://twitter.com/Lupleg_Dev">
+              <BsTwitterX className="text-white" />
+            </Link>
+
+            <Link href="https://linkedin.com/school/lupleg">
+              <FaLinkedin className="text-white" />
+            </Link>
+            <Link href="https://github.com/lupleg">
+              <FaInstagram className="text-white" />
+            </Link>
           </div>
-          <div className="flex items-center gap-6">
-            <Link href="#" className="hover:text-gray-300">
-              <Youtube className="w-5 h-5" />
-            </Link>
-            <Link href="#" className="hover:text-gray-300">
-              <Twitter className="w-5 h-5" />
-            </Link>
-            <Link href="#" className="hover:text-gray-300">
-              <Facebook className="w-5 h-5" />
-            </Link>
-            <Link href="#" className="hover:text-gray-300">
-              <Linkedin className="w-5 h-5" />
-            </Link>
+          <div className="mt-4 text-center md:mt-0 md:text-left">
+            <p>© Copyright {new Date().getFullYear()}, All Rights Reserved</p>
           </div>
         </div>
-      </div>
-    </footer>
-  )
+      </footer>
+    </div>
+  );
 }
-
