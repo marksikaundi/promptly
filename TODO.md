@@ -10,9 +10,13 @@
 
         ### IN PROGRESS
         - Landing page
+        - FAQ
+        - POSTING
 
 
         ### DONE
+                - FOOTER
+                - HEADER
 
 
         ### BUGS
