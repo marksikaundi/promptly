@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-export default function FAQ() {
+export default function Page() {
   return (
     <div className="max-w-3xl mx-auto p-6">
       <div className="mb-8">
