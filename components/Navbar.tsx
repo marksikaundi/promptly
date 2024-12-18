@@ -7,8 +7,8 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
-  SheetHeader,
-  SheetTitle,
+  // SheetHeader,
+  // SheetTitle,
   SheetClose,
 } from "@/components/ui/sheet";
 
@@ -70,9 +70,9 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetHeader>
-                <SheetTitle>Menu</SheetTitle>
-              </SheetHeader>
+              {/* <SheetHeader className="ml-2">
+                <SheetTitle>Promptly</SheetTitle>
+              </SheetHeader> */}
               <nav className="flex flex-col space-y-4 mt-8">
                 {navigation.map((item) => (
                   <SheetClose asChild key={item.name}>
