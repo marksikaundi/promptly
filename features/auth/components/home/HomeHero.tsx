@@ -1,68 +1,133 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Star } from "lucide-react";
+import { Check, Play } from 'lucide-react'
+import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import Link from "next/link"
 
-export default function HomeHero() {
+export function HeroSection() {
+  const features = [
+    "Post to all major platforms in one click",
+    "Schedule content for the perfect posting time",
+    "Customize content for each platform",
+    "Generate viral videos using our studio templates",
+  ]
+
   return (
-    <div className="bg-[#2D1537] min-h-screen">
-      <section className="container mx-auto px-4 py-16 md:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Automate Your Social Media Posts
+    <section className="container relative px-4 sm:px-6 lg:px-8 pt-20 pb-8 md:pt-24 lg:pt-32">
+      <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 xl:gap-24">
+        <div className="flex flex-col justify-center space-y-10">
+          {/* Watch Demo Link */}
+          <Link 
+            href="#watch-demo"
+            className="inline-flex items-center space-x-2 text-[#00e887] hover:text-[#00e887]/90 w-fit"
+          >
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#00e887]/10">
+              <Play className="h-3 w-3 fill-current" />
+            </span>
+            <span className="text-sm font-medium">Watch demo video</span>
+          </Link>
+
+          {/* Hero Content */}
+          <div className="space-y-6">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+              Schedule your content everywhere in seconds
             </h1>
-            <p className="text-lg md:text-xl text-white/80 max-w-2xl">
-              Take control of your social media strategy. Plan, schedule, and
-              publish your posts with ease using our advanced scheduling tool.
+            <p className="text-lg text-muted-foreground md:text-xl">
+              The simplest way to post and grow on all platforms. Built for creators and small teams without the ridiculous price tag.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="#"
-                className="inline-flex h-12 items-center justify-center rounded-md bg-white px-6 text-sm font-medium text-[#2D1537] hover:bg-white/90"
-              >
-                Try for Free
-              </Link>
-              <Link
-                href="https://wa.me/+260776578583"
-                className="inline-flex h-12 items-center justify-center rounded-md border border-white/20 bg-white/10 px-6 text-sm text-white hover:bg-white/20"
-              >
-                Talk to us
-              </Link>
-            </div>
-            <div className="flex flex-wrap gap-6">
-              <div className="flex items-center gap-2">
-                <Star className="h-5 w-5 fill-current text-yellow-400" />
-                <span className="text-white font-medium">4.7 stars</span>
-                <span className="text-white/60">
-                  {" "}
-                  Trusted by over 1,000+ content creators and communities
-                </span>
-              </div>
-              {/* <div className="flex items-center gap-2">
-                <Star className="h-5 w-5 fill-current text-yellow-400" />
-                <span className="text-white font-medium">4.5 stars</span>
-                <span className="text-white/60">250+ reviews</span>
-              </div> */}
-            </div>
           </div>
-          <div className="relative">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden backdrop-blur">
-              <Image
-                src="/edu.svg"
-                alt="Front platform interface"
-                width={800}
-                height={400}
-                className="w-full h-full  contain"
-              />
+
+          {/* Features List */}
+          <ul className="space-y-4">
+            {features.map((feature, i) => (
+              <li key={i} className="flex items-center space-x-3">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#00e887]/10">
+                  <Check className="h-4 w-4 text-[#00e887]" />
+                </span>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          {/* CTA Button */}
+          <Button className="w-full bg-[#00e887] text-background hover:bg-[#00e887]/90 sm:w-auto">
+            Try it for free
+          </Button>
+
+          {/* Social Proof */}
+          <div className="flex items-center space-x-4">
+            <div className="flex -space-x-2">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div
+                  key={i}
+                  className="h-8 w-8 overflow-hidden rounded-full border-2 border-background"
+                >
+                  <Image
+                    src={`/placeholder.svg?height=32&width=32`}
+                    alt={`User ${i}`}
+                    width={32}
+                    height={32}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="flex items-center space-x-1">
+              <span className="font-medium">Loved by</span>
+              <span className="font-bold">2805</span>
+              <span className="text-muted-foreground">entrepreneurs</span>
             </div>
           </div>
         </div>
-        {/* <div className="mt-24 text-center">
-          <p className="text-white/80 text-lg">
-            Trusted by over 1,000+ developers and companies
-          </p>
-        </div> */}
-      </section>
-    </div>
-  );
+
+        {/* Platform Icons */}
+        <div className="relative hidden lg:block">
+          <div className="absolute right-0 top-1/2 -translate-y-1/2">
+            <div className="relative h-[350px] w-[450px]">
+              {/* Floating Platform Icons */}
+              <div className="absolute left-0 top-0 h-full w-full">
+                <Image
+                  src="/placeholder.svg?height=400&width=500"
+                  alt="Social media platforms"
+                  width={500}
+                  height={400}
+                  className="object-contain"
+                />
+              </div>
+              {/* Success Badge */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-white/90 px-4 py-2 shadow-lg backdrop-blur">
+                <div className="flex items-center space-x-2">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#00e887]/10">
+                    <Check className="h-3 w-3 text-[#00e887]" />
+                  </span>
+                  <span className="text-sm font-medium">Scheduled to all platforms</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Platform List */}
+        <div className="mt-8 lg:col-span-2">
+          <div className="flex flex-wrap items-center gap-4">
+            <span className="text-sm text-muted-foreground">All platforms:</span>
+            {['X', 'Instagram', 'LinkedIn', 'Facebook', 'TikTok', 'YouTube', 'Threads', 'Pinterest'].map((platform) => (
+              <div
+                key={platform}
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-muted"
+              >
+                <Image
+                  src={`/placeholder.svg?height=20&width=20`}
+                  alt={platform}
+                  width={20}
+                  height={20}
+                  className="h-5 w-5"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
+
