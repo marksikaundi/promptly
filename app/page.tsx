@@ -14,9 +14,6 @@ export default function Home() {
     router.push("#/auth/signup");
   };
 
-
-
-
   const features = [
     "Post to all major platforms in one click",
     "Schedule content for the perfect posting time",
