@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter } from 'next/navigation'
 
 
+
 export default function Home() {
   const router = useRouter();
 
@@ -22,6 +23,7 @@ export default function Home() {
   ];
 
   return (
+    <>
     <section className="container relative px-4 sm:px-6 lg:px-8 pt-20 pb-8 md:pt-24 lg:pt-32">
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 xl:gap-24">
         <div className="flex flex-col justify-center space-y-10">
@@ -152,5 +154,7 @@ export default function Home() {
         </div>
       </div>
     </section>
+    
+    </>
   );
 }
