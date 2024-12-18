@@ -1,9 +1,22 @@
+"use client";
+
 import { Check, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/navigation'
+
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleTry = () => {
+    router.push("#/auth/signup");
+  };
+
+
+
+
   const features = [
     "Post to all major platforms in one click",
     "Schedule content for the perfect posting time",
@@ -50,7 +63,7 @@ export default function Home() {
           </ul>
 
           {/* CTA Button */}
-          <Button className="w-full bg-[#2D1537] text-background hover:bg-[#2D1537]/90 sm:w-auto">
+          <Button onClick={handleTry} className="w-full bg-[#2D1537] text-background hover:bg-[#2D1537]/90 sm:w-auto">
             Try it for free
           </Button>
 
