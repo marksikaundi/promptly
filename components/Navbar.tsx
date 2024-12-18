@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import Link from "next/link"
-import { Menu } from 'lucide-react'
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -10,21 +10,21 @@ import {
   SheetHeader,
   SheetTitle,
   SheetClose,
-} from "@/components/ui/sheet"
+} from "@/components/ui/sheet";
 
 export function Navbar() {
   const navigation = [
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Reviews', href: '/reviews' },
-    { name: 'Features', href: '/features' },
-    { name: 'Platforms', href: '/platforms' },
-    { name: 'FAQ', href: '/faq' },
-  ]
+    { name: "Pricing", href: "/pricing" },
+    { name: "Reviews", href: "/reviews" },
+    { name: "Features", href: "/features" },
+    { name: "Platforms", href: "/platforms" },
+    { name: "FAQ", href: "/faq" },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
+      <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center space-x-2 mr-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -37,9 +37,9 @@ export function Navbar() {
           >
             <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
           </svg>
-          <span className="font-semibold">post bridge</span>
+          <span className="font-semibold">Promptly</span>
         </Link>
-        
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex justify-center flex-1">
           {navigation.map((item) => (
@@ -52,12 +52,15 @@ export function Navbar() {
             </Link>
           ))}
         </nav>
-        
-        <div className="flex items-center space-x-4">
-          <Button variant="default" className="bg-[#00e887] text-background hover:bg-[#00e887]/90">
+
+        <div className="flex items-center space-x-4 ml-4">
+          <Button
+            variant="default"
+            className="bg-[#2D1537] text-background hover:bg-[#2D1537]/90"
+          >
             Login
           </Button>
-          
+
           {/* Mobile Navigation */}
           <Sheet>
             <SheetTrigger asChild className="md:hidden">
@@ -82,7 +85,10 @@ export function Navbar() {
                   </SheetClose>
                 ))}
                 <SheetClose asChild>
-                  <Button variant="default" className="bg-[#00e887] text-background hover:bg-[#00e887]/90 w-full mt-4">
+                  <Button
+                    variant="default"
+                    className="bg-[#2D1537] text-background hover:bg-[#2D1537]/90 w-full mt-4"
+                  >
                     Login
                   </Button>
                 </SheetClose>
@@ -92,6 +98,5 @@ export function Navbar() {
         </div>
       </div>
     </header>
-  )
+  );
 }
-
