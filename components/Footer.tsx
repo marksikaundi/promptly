@@ -9,33 +9,30 @@ import { FcDonate } from "react-icons/fc";
 
 const footerData = [
   {
-    title: "Company",
+    title: "LEGAL",
     links: [
       { name: "About us", path: "/about-us" },
-      { name: "Terms", path: "/terms" },
+      { name: "Terms of Services", path: "/terms" },
       { name: "Privacy Policy", path: "/privacy-policy" },
       { name: "FAQ", path: "/faq" },
     ],
   },
   {
-    title: "Links",
+    title: "LINKS",
     links: [
-      { name: "Challenge", path: "" },
+      { name: "Support", path: "" },
+      { name: "Pricing", path: "" },
       { name: "Affiliates", path: "" },
-      { name: "Partner with Us", path: "" },
-      { name: "Research", path: "" },
-      { name: "Publications", path: "" },
       { name: "Changelog", path: "" },
     ],
   },
   {
-    title: "Resources",
+    title: "RESOURCES",
     links: [
-      { name: "Web Editor", path: "" },
-      { name: "Sitemap", path: "" },
+      { name: "Blogs", path: "" },
       { name: "Tips", path: "" },
-      { name: "Projects", path: "" },
       { name: "Docs", path: "" },
+      { name: "Sitemap", path: "" },
     ],
   },
 ];
