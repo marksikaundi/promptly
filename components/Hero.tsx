@@ -26,7 +26,7 @@ export default function Hero() {
             <FeatureList />
 
             <div className="space-y-8">
-              <Button className="bg-emerald-400 hover:bg-emerald-500 text-white px-8 py-6 text-lg rounded-full">
+              <Button className="bg-[#2D1537] hover:bg-[#2D1537] text-white px-8 py-6 text-lg rounded-full">
                 Try it for free
               </Button>
 
