@@ -90,7 +90,7 @@ export function PricingCard({
           Start 7 day free trial →
         </Button>
         <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-          <div className="h-2 w-2 rounded-full bg-green-500" />
+          <div className="h-2 w-2 rounded-full bg-[#2D1537]" />
           $0.00 due today, cancel anytime
         </div>
       </CardFooter>
