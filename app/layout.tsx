@@ -3,7 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ConvexClientProvider } from "./ConvexClientProvider";
 import Footer from "@/components/Footer";
-import { Navbar } from "@/components/Navbar";
+// import { Navbar } from "@/components/Navbar";
+import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,6 @@ export const metadata: Metadata = {
   description: "Simplify your social media management with Promptly",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,13 +32,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ConvexClientProvider>
-          <Navbar/>
-          {/* <Header /> */}
+          {/* <Navbar/> */}
+          <Header />
           {children}
-          <Footer/>
-          
-          </ConvexClientProvider>
-
+          <Footer />
+        </ConvexClientProvider>
       </body>
     </html>
   );
