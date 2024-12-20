@@ -4,9 +4,6 @@ import { PricingCard } from "@/features/price/pricing-card";
 import { PricingToggle } from "@/features/price/pricing-toggle";
 import { SocialPlatforms } from "@/features/price/social-platforms";
 import { useState } from "react";
-// import { PricingToggle } from "./components/pricing-toggle";
-// import { PricingCard } from "./components/pricing-card";
-// import { SocialPlatforms } from "./components/social-platforms";
 
 export default function PricingPage() {
   const [isYearly, setIsYearly] = useState(false);
