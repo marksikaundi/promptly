@@ -1,15 +1,63 @@
-import { AlertCircle, DollarSign, Package2, Zap } from "lucide-react";
 import {
+  AlertCircle,
+  DollarSign,
+  Package2,
+  Zap,
   Calendar,
   FolderCog,
   Laptop,
   Clock,
   Rocket,
   Users,
+  Plus,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
+// Import platform icons
+import {
+  Twitter,
+  Instagram,
+  Linkedin,
+  Facebook,
+  Youtube,
+  PinIcon as Pinterest,
+} from "lucide-react";
+
 export default function ContentPosting() {
+  const platforms = [
+    { name: "Twitter/X", icon: Twitter },
+    { name: "Instagram", icon: Instagram },
+    { name: "LinkedIn", icon: Linkedin },
+    { name: "Facebook", icon: Facebook },
+    {
+      name: "TikTok",
+      icon: ({ className }: { className?: string }) => (
+        <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+        </svg>
+      ),
+    },
+    { name: "YouTube", icon: Youtube },
+    {
+      name: "Bluesky",
+      icon: ({ className }: { className?: string }) => (
+        <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L1 12l11 10 11-10L12 2zm0 15.5L5 12l7-5.5 7 5.5-7 5.5z" />
+        </svg>
+      ),
+    },
+    {
+      name: "Threads",
+      icon: ({ className }: { className?: string }) => (
+        <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.5 12.068V12c.013-5.392 2.866-8.863 7.828-9.626C11.354 2.006 12.984 2 13.472 2h.049c1.845.008 3.485.347 5.025 1.044l-.523 1.77a9.154 9.154 0 0 0-4.358-.865h-.116c-.483 0-1.906.006-3.636.334-4.039.618-6.318 3.362-6.329 7.72v.069c0 3.111.725 5.571 2.157 7.312 1.536 1.871 3.81 2.824 6.76 2.845 2.55 0 4.484-.675 5.961-2.067 1.434-1.352 2.095-3.276 2.095-6.066v-.677h-8.31v-1.957h10.425v2.321c0 3.504-.881 6.17-2.617 7.926-1.861 1.885-4.466 2.841-7.753 2.841z" />
+        </svg>
+      ),
+    },
+    { name: "Pinterest", icon: Pinterest },
+    { name: "Request a Platform", icon: Plus },
+  ];
+
   return (
     <div className="container mx-auto px-4 py-12 max-w-6xl">
       <div className="space-y-20">
@@ -229,6 +277,32 @@ export default function ContentPosting() {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Supported Platforms Section */}
+        <div className="space-y-8">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl font-bold">Supported Platforms</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Use post bridge to schedule and post your content across all of
+              these social media platforms at the same time - all from one
+              place.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {platforms.map((platform) => (
+              <Card
+                key={platform.name}
+                className="bg-gray-50 hover:bg-gray-100 transition-colors"
+              >
+                <CardContent className="p-6 flex flex-col items-center justify-center space-y-2">
+                  <platform.icon className="w-8 h-8" />
+                  <span className="text-sm font-medium">{platform.name}</span>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </div>
