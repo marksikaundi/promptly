@@ -12,6 +12,7 @@ import {
   Plus,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 // Import platform icons
 import {
@@ -302,6 +303,83 @@ export default function ContentPosting() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+
+        {/* Creator Section */}
+        <div className="space-y-8 bg-gray-50 rounded-2xl p-8">
+          <div className="grid md:grid-cols-[240px,1fr] gap-8 items-start">
+            <div className="relative aspect-square w-full max-w-[240px] mx-auto">
+              <Image
+                src="/placeholder.svg"
+                alt="Jack, creator of post bridge"
+                width={240}
+                height={240}
+                className="rounded-2xl object-cover"
+              />
+            </div>
+            <div className="space-y-6">
+              <h2 className="text-2xl md:text-3xl font-bold">
+                heyo! it&apos;s jack{" "}
+                <span className="text-gray-500">
+                  (the guy who made post bridge)
+                </span>
+              </h2>
+
+              <div className="space-y-4 text-gray-600">
+                <p>
+                  Last year I was spending over 1 hour every day posting the
+                  same content to all social platforms. I needed a faster way to
+                  post my content to promote my mobile app.
+                </p>
+
+                <p>
+                  I wanted to use existing tools but they all charged way too
+                  much money, on top of that they were way too complex. I was
+                  hardly making any money to begin with and these tools were
+                  asking me to pay $50-$150 per month!
+                </p>
+
+                <p>
+                  I set out to built my own tool just for myself, but turns out
+                  other people had the same problem as me! That&apos;s how post
+                  bridge was born.
+                </p>
+
+                <p>
+                  I&apos;ve since used post bridge daily to grow my own mobile
+                  app to 100,000 users by posting all my content to all
+                  platforms - which has brought in over 100,000,000 views
+                </p>
+
+                <p>
+                  Now I save multiple hours per week and so do{" "}
+                  <span className="text-emerald-500 font-semibold">
+                    thousands
+                  </span>{" "}
+                  of others using post bridge - for a truly{" "}
+                  <span className="text-emerald-500 font-semibold">
+                    unbeatable
+                  </span>{" "}
+                  price.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <p className="text-center text-gray-600">
+              Want to see how I use post bridge daily? Check out this video
+            </p>
+            <div className="relative pb-[56.25%] h-0 rounded-2xl overflow-hidden bg-gray-100">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/your-video-id"
+                title="Welcome to post bridge! - post everywhere effortlessly demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </div>
