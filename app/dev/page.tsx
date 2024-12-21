@@ -18,9 +18,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-import Image from "next/image";
-
 import {
   Twitter,
   Instagram,
@@ -29,7 +26,9 @@ import {
   Youtube,
   PinIcon as Pinterest,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import HomeContent from "@/components/HomeContent";
 
 export default function ContentPosting() {
   const platforms = [
@@ -110,376 +109,385 @@ export default function ContentPosting() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12 max-w-6xl">
-      <div className="space-y-20">
-        {/* First Section */}
-        <div className="space-y-8">
-          <div className="space-y-4">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
-              Posting content shouldn&apos;t be this{" "}
-              <span className="text-red-500">hard</span>
-            </h1>
-            <p className="text-muted-foreground text-center">
-              Other solutions and tools...
+    <>
+      <div className="container mx-auto px-4 py-12 max-w-6xl">
+        <div className="space-y-20">
+          {/* First Section */}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+                Posting content shouldn&apos;t be this{" "}
+                <span className="text-red-500">hard</span>
+              </h1>
+              <p className="text-muted-foreground text-center">
+                Other solutions and tools...
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="bg-gray-50">
+                <CardContent className="p-6">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <AlertCircle className="w-5 h-5 text-red-500" />
+                      <h3 className="font-semibold text-lg">
+                        Manually posting
+                      </h3>
+                    </div>
+                    <p className="text-muted-foreground">
+                      Hours of time you can&apos;t get back - spent posting your
+                      content 1 by 1 to each platform (ouch!)
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-50">
+                <CardContent className="p-6">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <DollarSign className="w-5 h-5 text-red-500" />
+                      <h3 className="font-semibold text-lg">
+                        Unfairly expensive
+                      </h3>
+                    </div>
+                    <p className="text-muted-foreground">
+                      You&apos;re not an enterprise, or a Fortune 500 company,
+                      so why are you paying as much as one?
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-50">
+                <CardContent className="p-6">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <Package2 className="w-5 h-5 text-red-500" />
+                      <h3 className="font-semibold text-lg">
+                        Features you don&apos;t need
+                      </h3>
+                    </div>
+                    <p className="text-muted-foreground">
+                      99 features and you only need one... but you&apos;ll have
+                      to pay for for all of them.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-50">
+                <CardContent className="p-6">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <Zap className="w-5 h-5 text-red-500" />
+                      <h3 className="font-semibold text-lg">Complex tools</h3>
+                    </div>
+                    <p className="text-muted-foreground">
+                      The learning curve is steeper than a UFO&apos;s flight
+                      path. Houston, we have a problem!
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <p className="text-center text-muted-foreground">
+              Give up hours of your time or buckets of your cash? You
+              shouldn&apos;t have to choose...
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="bg-gray-50">
+          {/* Second Section */}
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center">
+              Grow your social reach with{" "}
+              <span className="text-emerald-500">less effort</span> for{" "}
+              <span className="text-emerald-500">less money</span>
+            </h2>
+            <p className="text-muted-foreground text-center">
+              Using Promptly features...
+            </p>
+          </div>
+
+          {/* Features Section */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <div className="flex items-center gap-2">
+                  <div className="rounded-full bg-emerald-100 p-1">
+                    <div className="rounded-full bg-emerald-500 w-2 h-2" />
+                  </div>
+                  <span className="text-emerald-500 font-semibold">
+                    Cross-posting
+                  </span>
+                </div>
+                <p className="text-muted-foreground">
+                  Upload your content to Promptly and post it to any of your
+                  connected social media accounts, including posting to all
+                  platforms at the same time.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Calendar className="w-5 h-5 text-gray-500" />
+                  <span className="font-medium">Scheduling</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <FolderCog className="w-5 h-5 text-gray-500" />
+                  <span className="font-medium">Content management</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Laptop className="w-5 h-5 text-gray-500" />
+                  <span className="font-medium">Content Studio</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative bg-gray-100 rounded-lg aspect-video flex items-center justify-center">
+              <div className="text-center space-y-2">
+                <h3 className="font-semibold text-xl">Watch views grow</h3>
+                <div className="text-4xl md:text-5xl font-bold text-emerald-500">
+                  10,000,000+
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Potential views await...
+                </p>
+              </div>
+              {/* Confetti dots decoration */}
+              <div className="absolute inset-0 overflow-hidden">
+                {[...Array(20)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="absolute w-1 h-1 bg-emerald-500 rounded-full animate-ping"
+                    style={{
+                      top: `${Math.random() * 100}%`,
+                      left: `${Math.random() * 100}%`,
+                      animationDelay: `${Math.random() * 2}s`,
+                      animationDuration: `${1 + Math.random() * 2}s`,
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Card>
               <CardContent className="p-6">
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <AlertCircle className="w-5 h-5 text-red-500" />
-                    <h3 className="font-semibold text-lg">Manually posting</h3>
+                  <div className="flex items-center gap-2 text-emerald-500">
+                    <Clock className="w-5 h-5" />
+                    <h3 className="text-sm font-medium">Weekly Time Saved</h3>
                   </div>
-                  <p className="text-muted-foreground">
-                    Hours of time you can&apos;t get back - spent posting your
-                    content 1 by 1 to each platform (ouch!)
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-3xl font-bold text-emerald-500">
+                      3h 4m
+                    </span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Per active user
                   </p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-50">
+            <Card>
               <CardContent className="p-6">
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <DollarSign className="w-5 h-5 text-red-500" />
-                    <h3 className="font-semibold text-lg">
-                      Unfairly expensive
-                    </h3>
+                  <div className="flex items-center gap-2 text-blue-500">
+                    <Rocket className="w-5 h-5" />
+                    <h3 className="text-sm font-medium">Yearly Time Saved</h3>
                   </div>
-                  <p className="text-muted-foreground">
-                    You&apos;re not an enterprise, or a Fortune 500 company, so
-                    why are you paying as much as one?
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-3xl font-bold text-blue-500">13</span>
+                    <span className="text-sm text-muted-foreground">
+                      entire days
+                    </span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Based on weekly average
                   </p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-50">
+            <Card>
               <CardContent className="p-6">
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <Package2 className="w-5 h-5 text-red-500" />
-                    <h3 className="font-semibold text-lg">
-                      Features you don&apos;t need
-                    </h3>
+                  <div className="flex items-center gap-2 text-orange-500">
+                    <Users className="w-5 h-5" />
+                    <h3 className="text-sm font-medium">Posts Published</h3>
                   </div>
-                  <p className="text-muted-foreground">
-                    99 features and you only need one... but you&apos;ll have to
-                    pay for for all of them.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-50">
-              <CardContent className="p-6">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-red-500" />
-                    <h3 className="font-semibold text-lg">Complex tools</h3>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-3xl font-bold text-orange-500">
+                      17,785
+                    </span>
                   </div>
-                  <p className="text-muted-foreground">
-                    The learning curve is steeper than a UFO&apos;s flight path.
-                    Houston, we have a problem!
+                  <p className="text-xs text-muted-foreground">
+                    ↗ 67% engagement
                   </p>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          <p className="text-center text-muted-foreground">
-            Give up hours of your time or buckets of your cash? You
-            shouldn&apos;t have to choose...
-          </p>
-        </div>
-
-        {/* Second Section */}
-        <div className="space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">
-            Grow your social reach with{" "}
-            <span className="text-emerald-500">less effort</span> for{" "}
-            <span className="text-emerald-500">less money</span>
-          </h2>
-          <p className="text-muted-foreground text-center">
-            Using Promptly features...
-          </p>
-        </div>
-
-        {/* Features Section */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Supported Platforms Section */}
           <div className="space-y-8">
-            <div className="space-y-6">
-              <div className="flex items-center gap-2">
-                <div className="rounded-full bg-emerald-100 p-1">
-                  <div className="rounded-full bg-emerald-500 w-2 h-2" />
-                </div>
-                <span className="text-emerald-500 font-semibold">
-                  Cross-posting
-                </span>
-              </div>
-              <p className="text-muted-foreground">
-                Upload your content to Promptly and post it to any of your
-                connected social media accounts, including posting to all
-                platforms at the same time.
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl font-bold">Supported Platforms</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Use Promptly to schedule and post your content across all of
+                these social media platforms at the same time - all from one
+                place.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <Calendar className="w-5 h-5 text-gray-500" />
-                <span className="font-medium">Scheduling</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <FolderCog className="w-5 h-5 text-gray-500" />
-                <span className="font-medium">Content management</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Laptop className="w-5 h-5 text-gray-500" />
-                <span className="font-medium">Content Studio</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative bg-gray-100 rounded-lg aspect-video flex items-center justify-center">
-            <div className="text-center space-y-2">
-              <h3 className="font-semibold text-xl">Watch views grow</h3>
-              <div className="text-4xl md:text-5xl font-bold text-emerald-500">
-                10,000,000+
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Potential views await...
-              </p>
-            </div>
-            {/* Confetti dots decoration */}
-            <div className="absolute inset-0 overflow-hidden">
-              {[...Array(20)].map((_, i) => (
-                <div
-                  key={i}
-                  className="absolute w-1 h-1 bg-emerald-500 rounded-full animate-ping"
-                  style={{
-                    top: `${Math.random() * 100}%`,
-                    left: `${Math.random() * 100}%`,
-                    animationDelay: `${Math.random() * 2}s`,
-                    animationDuration: `${1 + Math.random() * 2}s`,
-                  }}
-                />
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+              {platforms.map((platform) => (
+                <Card
+                  key={platform.name}
+                  className="bg-gray-50 hover:bg-gray-100 transition-colors"
+                >
+                  <CardContent className="p-6 flex flex-col items-center justify-center space-y-2">
+                    <platform.icon className="w-8 h-8" />
+                    <span className="text-sm font-medium">{platform.name}</span>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
-        </div>
 
-        {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Card>
-            <CardContent className="p-6">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-emerald-500">
-                  <Clock className="w-5 h-5" />
-                  <h3 className="text-sm font-medium">Weekly Time Saved</h3>
-                </div>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-3xl font-bold text-emerald-500">
-                    3h 4m
-                  </span>
-                </div>
-                <p className="text-xs text-muted-foreground">Per active user</p>
+          {/* Creator Section */}
+          <div className="space-y-8 bg-gray-50 rounded-2xl p-8">
+            <div className="grid md:grid-cols-[240px,1fr] gap-8 items-start">
+              <div className="relative aspect-square w-full max-w-[240px] mx-auto">
+                <Image
+                  src="/mark.jpg"
+                  alt="Mark, creator of Promptly"
+                  width={240}
+                  height={240}
+                  className="rounded-2xl object-cover"
+                />
               </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-6">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-blue-500">
-                  <Rocket className="w-5 h-5" />
-                  <h3 className="text-sm font-medium">Yearly Time Saved</h3>
-                </div>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-3xl font-bold text-blue-500">13</span>
-                  <span className="text-sm text-muted-foreground">
-                    entire days
+              <div className="space-y-6">
+                <h2 className="text-2xl md:text-3xl font-bold">
+                  heyo! it&apos;s Mark{" "}
+                  <span className="text-gray-500">
+                    (the guy who made Promptly)
                   </span>
+                </h2>
+
+                <div className="space-y-4 text-gray-600">
+                  <p>
+                    Last year I was spending over 1 hour every day posting the
+                    same content to all social platforms. I needed a faster way
+                    to post my content to promote my mobile app.
+                  </p>
+
+                  <p>
+                    I wanted to use existing tools but they all charged way too
+                    much money, on top of that they were way too complex. I was
+                    hardly making any money to begin with and these tools were
+                    asking me to pay $50-$150 per month!
+                  </p>
+
+                  <p>
+                    I set out to built my own tool just for myself, but turns
+                    out other people had the same problem as me! That&apos;s how
+                    Promptly was born.
+                  </p>
+
+                  <p>
+                    I&apos;ve since used Promptly daily to grow my own mobile
+                    app to 100,000 users by posting all my content to all
+                    platforms - which has brought in over 100,000,000 views
+                  </p>
+
+                  <p>
+                    Now I save multiple hours per week and so do{" "}
+                    <span className="text-emerald-500 font-semibold">
+                      thousands
+                    </span>{" "}
+                    of others using Promptly - for a truly{" "}
+                    <span className="text-emerald-500 font-semibold">
+                      unbeatable
+                    </span>{" "}
+                    price.
+                  </p>
                 </div>
-                <p className="text-xs text-muted-foreground">
-                  Based on weekly average
-                </p>
               </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-6">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-orange-500">
-                  <Users className="w-5 h-5" />
-                  <h3 className="text-sm font-medium">Posts Published</h3>
-                </div>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-3xl font-bold text-orange-500">
-                    17,785
-                  </span>
-                </div>
-                <p className="text-xs text-muted-foreground">
-                  ↗ 67% engagement
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Supported Platforms Section */}
-        <div className="space-y-8">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold">Supported Platforms</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Use Promptly to schedule and post your content across all of these
-              social media platforms at the same time - all from one place.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {platforms.map((platform) => (
-              <Card
-                key={platform.name}
-                className="bg-gray-50 hover:bg-gray-100 transition-colors"
-              >
-                <CardContent className="p-6 flex flex-col items-center justify-center space-y-2">
-                  <platform.icon className="w-8 h-8" />
-                  <span className="text-sm font-medium">{platform.name}</span>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Creator Section */}
-        <div className="space-y-8 bg-gray-50 rounded-2xl p-8">
-          <div className="grid md:grid-cols-[240px,1fr] gap-8 items-start">
-            <div className="relative aspect-square w-full max-w-[240px] mx-auto">
-              <Image
-                src="/mark.jpg"
-                alt="Mark, creator of Promptly"
-                width={240}
-                height={240}
-                className="rounded-2xl object-cover"
-              />
             </div>
-            <div className="space-y-6">
+
+            <div className="space-y-4">
+              <p className="text-center text-gray-600">
+                Want to see how I use Promptly daily? Check out this video
+              </p>
+              <div className="relative pb-[56.25%] h-0 rounded-2xl overflow-hidden bg-gray-100">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/your-video-id"
+                  title="Welcome to Promptly! - post everywhere effortlessly demo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <span className="text-emerald-500 font-medium">FAQ</span>
+              </div>
               <h2 className="text-2xl md:text-3xl font-bold">
-                heyo! it&apos;s Mark{" "}
-                <span className="text-gray-500">
-                  (the guy who made Promptly)
-                </span>
+                Frequently Asked Questions
               </h2>
-
-              <div className="space-y-4 text-gray-600">
-                <p>
-                  Last year I was spending over 1 hour every day posting the
-                  same content to all social platforms. I needed a faster way to
-                  post my content to promote my mobile app.
-                </p>
-
-                <p>
-                  I wanted to use existing tools but they all charged way too
-                  much money, on top of that they were way too complex. I was
-                  hardly making any money to begin with and these tools were
-                  asking me to pay $50-$150 per month!
-                </p>
-
-                <p>
-                  I set out to built my own tool just for myself, but turns out
-                  other people had the same problem as me! That&apos;s how
-                  Promptly was born.
-                </p>
-
-                <p>
-                  I&apos;ve since used Promptly daily to grow my own mobile app
-                  to 100,000 users by posting all my content to all platforms -
-                  which has brought in over 100,000,000 views
-                </p>
-
-                <p>
-                  Now I save multiple hours per week and so do{" "}
-                  <span className="text-emerald-500 font-semibold">
-                    thousands
-                  </span>{" "}
-                  of others using Promptly - for a truly{" "}
-                  <span className="text-emerald-500 font-semibold">
-                    unbeatable
-                  </span>{" "}
-                  price.
-                </p>
-              </div>
             </div>
+
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent>{faq.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
 
-          <div className="space-y-4">
-            <p className="text-center text-gray-600">
-              Want to see how I use Promptly daily? Check out this video
-            </p>
-            <div className="relative pb-[56.25%] h-0 rounded-2xl overflow-hidden bg-gray-100">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/your-video-id"
-                title="Welcome to Promptly! - post everywhere effortlessly demo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+          {/* Hero Section */}
+          {/* <div className="relative h-screen min-h-[600px] flex items-center justify-center w-full">
+            <div className="absolute inset-0 w-full h-full">
+              <Image
+                src="/social.jpg"
+                alt="Social media apps on a phone screen"
+                fill
+                className="object-cover"
+                priority
               />
+              <div className="absolute inset-0 bg-black/60" />
             </div>
-          </div>
-        </div>
-
-        {/* FAQ Section */}
-        <div className="space-y-8">
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="text-emerald-500 font-medium">FAQ</span>
+            <div className="relative z-10 text-center space-y-6 max-w-4xl mx-auto px-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+                Get more views, with less effort
+              </h1>
+              <p className="text-xl md:text-2xl text-white/90">
+                Post to all platforms in 30 seconds instead of 30 minutes.
+              </p>
+              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600">
+                Try for free
+              </Button>
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold">
-              Frequently Asked Questions
-            </h2>
-          </div>
-
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-
-        {/* Hero Section */}
-        <div className="relative h-screen min-h-[600px] flex items-center justify-center">
-          <div className="absolute inset-0">
-            <Image
-              src="/placeholder.svg"
-              alt="Social media apps on a phone screen"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-black/60" />
-          </div>
-          <div className="relative z-10 text-center space-y-6 max-w-4xl mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-              Get more views, with less effort
-            </h1>
-            <p className="text-xl md:text-2xl text-white/90">
-              Post to all platforms in 30 seconds instead of 30 minutes.
-            </p>
-            <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600">
-              Try for free
-            </Button>
-          </div>
+          </div> */}
         </div>
       </div>
-    </div>
+
+      <HomeContent />
+    </>
   );
 }
