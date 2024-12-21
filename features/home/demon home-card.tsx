@@ -6,7 +6,7 @@ import { Star } from "lucide-react";
   /* <div className="bg-[#2D1537] min-h-screen"> */
 }
 
-export default function HomeCard() {
+export default function DemoHomeCard() {
   return (
     <div className=" min-h-screen">
       <section className="container mx-auto px-4 py-16 md:py-24">
