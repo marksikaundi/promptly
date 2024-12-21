@@ -1,7 +1,6 @@
 
         ## STATUS CHECKS, TODO, IN PROGRESS, DONE, BUGS, NOTES
 
-        
 
         ### TODO
         
@@ -14,10 +13,12 @@
                 - PAYMENT INTEGRATION
 
         ### IN PROGRESS
+
                 - AUTHENTICATION(convex auth or clerk auth)
                 - PRICING(Payment integration with DPO) 
 
         ### DONE
+
                 - HEADER
                 - PRICING
                 - FOOTER
@@ -25,11 +26,13 @@
                 - FAQ
 
         ### BUGS
+
                 - HEADER(Responsiveness)
                 - PRICING(Redirect after payment)
 
 
         ### NOTES
+
         The project is solem and strictly for educational purposes. It is a project to test the knowledge of the developer in building a full stack application. The project is built with the following technologies: 
         
         - React
