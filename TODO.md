@@ -1,38 +1,55 @@
+## STATUS CHECKS, TODO, IN PROGRESS, DONE, BUGS, NOTES
 
-        ## FOR ORGANIZATION SAKE, PLEASE FOLLOW THE TEMPLATE BELOW
+<table>
+  <tr>
+    <th style="background-color:gray">TODO</th>
+    <th style="background-color:green">IN PROGRESS</th>
+    <th style="background-color:yellow">DONE</th>
+    <th style="background-color:red">BUGS</th>
+  </tr>
+  <tr>
+    <td>ABOUT US</td>
+    <td>AUTHENTICATION(convex auth or clerk auth)</td>
+    <td>HEADER</td>
+    <td>HEADER(Responsiveness)</td>
+  </tr>
+  <tr>
+    <td>CONTACT US</td>
+    <td>PRICING(Payment integration with DPO)</td>
+    <td>PRICING</td>
+    <td>PRICING(Redirect after payment)</td>
+  </tr>
+  <tr>
+    <td>TERMS OF SERVICE</td>
+    <td></td>
+    <td>FOOTER</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>PRIVACY POLICY</td>
+    <td></td>
+    <td>HOME</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>DASHBOARD</td>
+    <td></td>
+    <td>FAQ</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>EDIT PROFILE</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>PAYMENT INTEGRATION</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
-        ### TODO
-        
-        - LANDING PAGE
-        - HEADER
-        - FOOTER
-        - AUTHENTICATION
-
-        ### IN PROGRESS
-        - Landing page
-        - FAQ
-        - POSTING
-
-
-        ### DONE
-                - FOOTER
-                - HEADER
-
-
-        ### BUGS
-
-
-        ### NOTES
-        Inspired by [this](titanapps.io) website.
-        ```
-
-        ## NETWORK ACCESS
-        
-        ```
-        http://192.168.184.26:3000
-        ```
-
-        ### INSPIRED BY
-        ```
-        https://www.post-bridge.com/#pricing
-        ```
+### NOTES
+The project is solemn and strictly for educational purposes. It is a project to test the knowledge of the developer in building a
