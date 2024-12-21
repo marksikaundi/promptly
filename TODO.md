@@ -22,7 +22,7 @@
                 - HEADER
                 - PRICING
                 - FOOTER
-                - HOME
+                - HOME(LANDING PAGE)
                 - FAQ
 
         ### BUGS
@@ -30,6 +30,19 @@
                 - HEADER(Responsiveness)
                 - PRICING(Redirect after payment)
 
+        ### 2.1.0
+
+                - HEADER(Responsiveness)
+                - PRICING(Redirect after payment)
+                - AUTHENTICATION(convex auth or clerk auth)
+                - PRICING(Payment integration with DPO) 
+                - ABOUT US
+                - CONTACT US
+                - TERMS OF SERVICE
+                - PRIVACY POLICY
+                - DASHBOARD
+                - EDIT PROFILE
+                - PAYMENT INTEGRATION
 
         ### NOTES
 
