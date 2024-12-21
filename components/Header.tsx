@@ -36,22 +36,19 @@ export default function Header() {
             <Link href="/pricing" className="text-gray-700 hover:text-gray-900">
               Pricing
             </Link>
-            <Link href="/reviews" className="text-gray-700 hover:text-gray-900">
-              Reviews
-            </Link>
             <Link
-              href="/features"
+              href="#features"
               className="text-gray-700 hover:text-gray-900"
             >
               Features
             </Link>
             <Link
-              href="/platforms"
+              href="#platforms"
               className="text-gray-700 hover:text-gray-900"
             >
               Platforms
             </Link>
-            <Link href="/faq" className="text-gray-700 hover:text-gray-900">
+            <Link href="#faq" className="text-gray-700 hover:text-gray-900">
               FAQ
             </Link>
           </div>

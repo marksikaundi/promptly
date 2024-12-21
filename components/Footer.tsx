@@ -14,14 +14,14 @@ const footerData = [
       { name: "About us", path: "/about-us" },
       { name: "Terms of Services", path: "/terms" },
       { name: "Privacy Policy", path: "/privacy-policy" },
-      { name: "FAQ", path: "/faq" },
+      { name: "FAQ", path: "/#faq" },
     ],
   },
   {
     title: "LINKS",
     links: [
       { name: "Support", path: "" },
-      { name: "Pricing", path: "" },
+      { name: "Pricing", path: "/pricing" },
       { name: "Affiliates", path: "" },
       { name: "Changelog", path: "" },
     ],
@@ -29,9 +29,9 @@ const footerData = [
   {
     title: "RESOURCES",
     links: [
-      { name: "Blogs", path: "" },
+      { name: "Blogs", path: "/blogs" },
       { name: "Tips", path: "" },
-      { name: "Docs", path: "" },
+      { name: "Docs", path: "#" },
       { name: "Sitemap", path: "" },
     ],
   },
