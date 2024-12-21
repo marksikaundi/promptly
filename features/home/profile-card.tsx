@@ -2,10 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Star } from "lucide-react";
 
-{
-  /* <div className="bg-[#2D1537] min-h-screen"> */
-}
-
 export default function ProfileCard() {
   return (
     <div className=" min-h-screen">
