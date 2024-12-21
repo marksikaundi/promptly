@@ -29,6 +29,7 @@ import {
 import Image from "next/image";
 import BottomCard from "@/features/home/bottom-cover";
 import Blogs from "./blogs/page";
+import HomeCard from "@/features/home/home-card";
 
 export default function ContentPosting() {
   const platforms = [
@@ -110,6 +111,7 @@ export default function ContentPosting() {
 
   return (
     <>
+      <HomeCard />
       <div className="container mx-auto px-4 py-12 max-w-6xl">
         <div className="space-y-20">
           {/* First Section */}
