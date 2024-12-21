@@ -12,9 +12,15 @@ import {
   Plus,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 import Image from "next/image";
 
-// Import platform icons
 import {
   Twitter,
   Instagram,
@@ -23,6 +29,7 @@ import {
   Youtube,
   PinIcon as Pinterest,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function ContentPosting() {
   const platforms = [
@@ -57,6 +64,49 @@ export default function ContentPosting() {
     },
     { name: "Pinterest", icon: Pinterest },
     { name: "Request a Platform", icon: Plus },
+  ];
+
+  const faqs = [
+    {
+      question: "What social platforms do you support?",
+      answer:
+        "We support all major social media platforms including Twitter/X, Instagram, LinkedIn, Facebook, TikTok, YouTube, Bluesky, Threads, and Pinterest. We're constantly adding more platforms based on user requests.",
+    },
+    {
+      question: "How many social accounts can I connect?",
+      answer:
+        "You can connect unlimited social media accounts across all supported platforms. There are no restrictions on the number of accounts you can manage.",
+    },
+    {
+      question: "What is a social account?",
+      answer:
+        "A social account is any profile or page you manage on social media platforms. This could be your personal profile, business page, or brand account on any of our supported platforms.",
+    },
+    {
+      question: "How many posts can I make and schedule per month?",
+      answer:
+        "There are no limits on the number of posts you can make or schedule per month. Post as much as you need to grow your social media presence.",
+    },
+    {
+      question: "Will my posts get less reach using this app?",
+      answer:
+        "No, your posts will get the same reach as if you posted directly on each platform. We use official APIs and posting methods approved by each platform.",
+    },
+    {
+      question: "Can I cancel anytime?",
+      answer:
+        "Yes, you can cancel your subscription at any time. There are no long-term commitments or contracts.",
+    },
+    {
+      question: "Can I get a refund?",
+      answer:
+        "Yes, we offer a 30-day money-back guarantee. If you're not satisfied with our service, we'll refund your payment no questions asked.",
+    },
+    {
+      question: "I have another question",
+      answer:
+        "Please reach out to our support team at support@postbridge.com and we'll be happy to help you with any questions you have.",
+    },
   ];
 
   return (
@@ -154,7 +204,7 @@ export default function ContentPosting() {
             <span className="text-emerald-500">less money</span>
           </h2>
           <p className="text-muted-foreground text-center">
-            Using post bridge features...
+            Using Promptly features...
           </p>
         </div>
 
@@ -171,7 +221,7 @@ export default function ContentPosting() {
                 </span>
               </div>
               <p className="text-muted-foreground">
-                Upload your content to post bridge and post it to any of your
+                Upload your content to Promptly and post it to any of your
                 connected social media accounts, including posting to all
                 platforms at the same time.
               </p>
@@ -285,9 +335,8 @@ export default function ContentPosting() {
           <div className="text-center space-y-4">
             <h2 className="text-3xl font-bold">Supported Platforms</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Use post bridge to schedule and post your content across all of
-              these social media platforms at the same time - all from one
-              place.
+              Use Promptly to schedule and post your content across all of these
+              social media platforms at the same time - all from one place.
             </p>
           </div>
 
@@ -311,8 +360,8 @@ export default function ContentPosting() {
           <div className="grid md:grid-cols-[240px,1fr] gap-8 items-start">
             <div className="relative aspect-square w-full max-w-[240px] mx-auto">
               <Image
-                src="/placeholder.svg"
-                alt="Jack, creator of post bridge"
+                src="/mark.jpg"
+                alt="Mark, creator of Promptly"
                 width={240}
                 height={240}
                 className="rounded-2xl object-cover"
@@ -320,9 +369,9 @@ export default function ContentPosting() {
             </div>
             <div className="space-y-6">
               <h2 className="text-2xl md:text-3xl font-bold">
-                heyo! it&apos;s jack{" "}
+                heyo! it&apos;s Mark{" "}
                 <span className="text-gray-500">
-                  (the guy who made post bridge)
+                  (the guy who made Promptly)
                 </span>
               </h2>
 
@@ -342,14 +391,14 @@ export default function ContentPosting() {
 
                 <p>
                   I set out to built my own tool just for myself, but turns out
-                  other people had the same problem as me! That&apos;s how post
-                  bridge was born.
+                  other people had the same problem as me! That&apos;s how
+                  Promptly was born.
                 </p>
 
                 <p>
-                  I&apos;ve since used post bridge daily to grow my own mobile
-                  app to 100,000 users by posting all my content to all
-                  platforms - which has brought in over 100,000,000 views
+                  I&apos;ve since used Promptly daily to grow my own mobile app
+                  to 100,000 users by posting all my content to all platforms -
+                  which has brought in over 100,000,000 views
                 </p>
 
                 <p>
@@ -357,7 +406,7 @@ export default function ContentPosting() {
                   <span className="text-emerald-500 font-semibold">
                     thousands
                   </span>{" "}
-                  of others using post bridge - for a truly{" "}
+                  of others using Promptly - for a truly{" "}
                   <span className="text-emerald-500 font-semibold">
                     unbeatable
                   </span>{" "}
@@ -369,17 +418,65 @@ export default function ContentPosting() {
 
           <div className="space-y-4">
             <p className="text-center text-gray-600">
-              Want to see how I use post bridge daily? Check out this video
+              Want to see how I use Promptly daily? Check out this video
             </p>
             <div className="relative pb-[56.25%] h-0 rounded-2xl overflow-hidden bg-gray-100">
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/your-video-id"
-                title="Welcome to post bridge! - post everywhere effortlessly demo"
+                title="Welcome to Promptly! - post everywhere effortlessly demo"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
             </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="space-y-8">
+          <div className="space-y-4">
+            <div className="flex items-center gap-2">
+              <span className="text-emerald-500 font-medium">FAQ</span>
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger className="text-left">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent>{faq.answer}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+
+        {/* Hero Section */}
+        <div className="relative h-screen min-h-[600px] flex items-center justify-center">
+          <div className="absolute inset-0">
+            <Image
+              src="/placeholder.svg"
+              alt="Social media apps on a phone screen"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/60" />
+          </div>
+          <div className="relative z-10 text-center space-y-6 max-w-4xl mx-auto px-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+              Get more views, with less effort
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90">
+              Post to all platforms in 30 seconds instead of 30 minutes.
+            </p>
+            <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600">
+              Try for free
+            </Button>
           </div>
         </div>
       </div>
