@@ -36,7 +36,7 @@ export default function HomeCard() {
                 <span className="text-black font-medium">4.7 stars</span>
                 <span className="text-black">
                   {" "}
-                  Trusted by over 1,000+ developers and communities
+                  Trusted by over 1,000+ content creators 
                 </span>
               </div>
               {/* <div className="flex items-center gap-2">
