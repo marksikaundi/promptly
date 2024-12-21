@@ -1,55 +1,61 @@
-## STATUS CHECKS, TODO, IN PROGRESS, DONE, BUGS, NOTES
 
-<table>
-  <tr>
-    <th style="background-color:gray">TODO</th>
-    <th style="background-color:green">IN PROGRESS</th>
-    <th style="background-color:yellow">DONE</th>
-    <th style="background-color:red">BUGS</th>
-  </tr>
-  <tr>
-    <td>ABOUT US</td>
-    <td>AUTHENTICATION(convex auth or clerk auth)</td>
-    <td>HEADER</td>
-    <td>HEADER(Responsiveness)</td>
-  </tr>
-  <tr>
-    <td>CONTACT US</td>
-    <td>PRICING(Payment integration with DPO)</td>
-    <td>PRICING</td>
-    <td>PRICING(Redirect after payment)</td>
-  </tr>
-  <tr>
-    <td>TERMS OF SERVICE</td>
-    <td></td>
-    <td>FOOTER</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>PRIVACY POLICY</td>
-    <td></td>
-    <td>HOME</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>DASHBOARD</td>
-    <td></td>
-    <td>FAQ</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>EDIT PROFILE</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>PAYMENT INTEGRATION</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+        ## STATUS CHECKS, TODO, IN PROGRESS, DONE, BUGS, NOTES
 
-### NOTES
-The project is solemn and strictly for educational purposes. It is a project to test the knowledge of the developer in building a
+        
+
+        ### TODO
+        
+                - ABOUT US
+                - CONTACT US
+                - TERMS OF SERVICE
+                - PRIVACY POLICY
+                - DASHBOARD
+                - EDIT PROFILE
+                - PAYMENT INTEGRATION
+
+        ### IN PROGRESS
+                - AUTHENTICATION(convex auth or clerk auth)
+                - PRICING(Payment integration with DPO) 
+
+        ### DONE
+                - HEADER
+                - PRICING
+                - FOOTER
+                - HOME
+                - FAQ
+
+        ### BUGS
+                - HEADER(Responsiveness)
+                - PRICING(Redirect after payment)
+
+
+        ### NOTES
+        The project is solem and strictly for educational purposes. It is a project to test the knowledge of the developer in building a full stack application. The project is built with the following technologies: 
+        
+        - React
+        - Nextjs
+        - Tailwindcss
+        - Convex Auth
+        - Clerk Auth
+        - DPO Payment Integration
+        - Typescript
+
+
+       
+
+        ## NETWORK ACCESS
+        
+        ```
+        http://192.168.184.26:3000
+        ```
+
+        ### INSPIRED BY
+        ```
+        https://www.post-bridge.com/#pricing
+        ```
+
+        ### DEVELOPER
+        ```
+        Name: Mark Sikaundi
+
+
