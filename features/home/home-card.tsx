@@ -13,8 +13,7 @@ export default function HomeCard() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2D1537] leading-tight">
-              Promptly the only tool you need to get contents accross all social
-              nextworks
+              Tool for Seamless Social Media Content Distribution
             </h1>
             <p className="text-lg md:text-xl text-[#2D1537] max-w-2xl">
               Promptly is a platform that helps you create, schedule, and
@@ -25,21 +24,17 @@ export default function HomeCard() {
               <Link
                 href="#"
                 className="inline-flex h-12 items-center justify-center rounded-md bg-white px-6 text-sm font-medium text-[#2D1537] hover:bg-white/90"
-              >
-                
-              </Link>
+              ></Link>
               <Link
                 href="https://wa.me/+260776578583"
                 className="inline-flex h-12 items-center justify-center rounded-md border border-white/20 bg-white/10 px-6 text-sm text-white hover:bg-white/20"
-              >
-                
-              </Link>
+              ></Link>
             </div>
             <div className="flex flex-wrap gap-6">
               <div className="flex items-center gap-2">
                 <Star className="h-5 w-5 fill-current text-yellow-400" />
-                <span className="text-white font-medium">4.7 stars</span>
-                <span className="text-white/60">
+                <span className="text-black font-medium">4.7 stars</span>
+                <span className="text-black">
                   {" "}
                   Trusted by over 1,000+ developers and communities
                 </span>
