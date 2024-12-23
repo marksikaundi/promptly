@@ -1,17 +1,23 @@
-'use client'
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { FaSquareFacebook } from "react-icons/fa6";
+import { BsTwitterX } from "react-icons/bs";
+import { FaLinkedin } from "react-icons/fa";
+import { AiFillTikTok } from "react-icons/ai";
+import { FaInstagramSquare } from "react-icons/fa";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-import { Badge } from "@/components/ui/badge"
-import { Settings, Upload, X } from 'lucide-react'
-import Image from "next/image"
+} from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
+import { Settings, Upload, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Dashboard() {
   return (
@@ -161,63 +167,24 @@ export default function Dashboard() {
             {/* Social Media Buttons */}
             <div className="grid gap-3">
               <Button variant="outline" className="justify-start h-11">
-                <Image
-                  src="/placeholder.svg"
-                  alt="Instagram"
-                  width={24}
-                  height={24}
-                  className="mr-2"
-                />
+                <FaInstagramSquare className="w-6 h-6 mr-2" />
                 Connect Instagram
               </Button>
               <Button variant="outline" className="justify-start h-11">
-                <Image
-                  src="/placeholder.svg"
-                  alt="LinkedIn"
-                  width={24}
-                  height={24}
-                  className="mr-2"
-                />
+                <FaLinkedin className="w-6 h-6 mr-2" />
                 Connect LinkedIn
               </Button>
               <Button variant="outline" className="justify-start h-11">
-                <Image
-                  src="/placeholder.svg"
-                  alt="TikTok"
-                  width={24}
-                  height={24}
-                  className="mr-2"
-                />
+                <AiFillTikTok className="w-6 h-6 mr-2" />
                 Connect Tiktok
               </Button>
               <Button variant="outline" className="justify-start h-11">
-                <Image
-                  src="/placeholder.svg"
-                  alt="Twitter"
-                  width={24}
-                  height={24}
-                  className="mr-2"
-                />
+              <BsTwitterX className="w-6 h-6 mr-2" />
+
                 Connect Twitter
               </Button>
               <Button variant="outline" className="justify-start h-11">
-                <Image
-                  src="/placeholder.svg"
-                  alt="YouTube"
-                  width={24}
-                  height={24}
-                  className="mr-2"
-                />
-                Connect Youtube
-              </Button>
-              <Button variant="outline" className="justify-start h-11">
-                <Image
-                  src="/placeholder.svg"
-                  alt="Facebook"
-                  width={24}
-                  height={24}
-                  className="mr-2"
-                />
+                <FaSquareFacebook className="w-6 h-6 mr-2" />
                 Connect Facebook
               </Button>
             </div>
@@ -293,6 +260,5 @@ export default function Dashboard() {
         </Card>
       </main>
     </div>
-  )
+  );
 }
-
