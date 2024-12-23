@@ -5,6 +5,7 @@ import { BsTwitterX } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
 import { FaInstagramSquare } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -179,8 +180,7 @@ export default function Dashboard() {
                 Connect Tiktok
               </Button>
               <Button variant="outline" className="justify-start h-11">
-              <BsTwitterX className="w-6 h-6 mr-2" />
-
+                <BsTwitterX className="w-6 h-6 mr-2" />
                 Connect Twitter
               </Button>
               <Button variant="outline" className="justify-start h-11">
@@ -194,12 +194,7 @@ export default function Dashboard() {
               <Badge variant="secondary" className="h-8 gap-2 pl-2 pr-1">
                 <div className="flex items-center gap-2">
                   <div className="w-5 h-5 rounded-full overflow-hidden">
-                    <Image
-                      src="/placeholder.svg"
-                      alt="curiosity.quench"
-                      width={20}
-                      height={20}
-                    />
+                    <FaUserCircle className="w-5 h-5" />
                   </div>
                   curiosity.quench
                 </div>
@@ -210,12 +205,7 @@ export default function Dashboard() {
               <Badge variant="secondary" className="h-8 gap-2 pl-2 pr-1">
                 <div className="flex items-center gap-2">
                   <div className="w-5 h-5 rounded-full overflow-hidden">
-                    <Image
-                      src="/placeholder.svg"
-                      alt="scroll.less.daily"
-                      width={20}
-                      height={20}
-                    />
+                    <FaUserCircle className="w-5 h-5" />
                   </div>
                   scroll.less.daily
                 </div>
@@ -226,14 +216,9 @@ export default function Dashboard() {
               <Badge variant="secondary" className="h-8 gap-2 pl-2 pr-1">
                 <div className="flex items-center gap-2">
                   <div className="w-5 h-5 rounded-full overflow-hidden">
-                    <Image
-                      src="/placeholder.svg"
-                      alt="jackfriks"
-                      width={20}
-                      height={20}
-                    />
+                    <FaUserCircle className="w-5 h-5" />
                   </div>
-                  jackfriks
+                  ms_dev
                 </div>
                 <Button variant="ghost" size="icon" className="h-6 w-6">
                   <X className="h-3 w-3" />
@@ -242,14 +227,9 @@ export default function Dashboard() {
               <Badge variant="secondary" className="h-8 gap-2 pl-2 pr-1">
                 <div className="flex items-center gap-2">
                   <div className="w-5 h-5 rounded-full overflow-hidden">
-                    <Image
-                      src="/placeholder.svg"
-                      alt="scroll_less_live_more"
-                      width={20}
-                      height={20}
-                    />
+                    <FaUserCircle className="w-5 h-5" />
                   </div>
-                  scroll_less_live_more
+                  Mark
                 </div>
                 <Button variant="ghost" size="icon" className="h-6 w-6">
                   <X className="h-3 w-3" />
