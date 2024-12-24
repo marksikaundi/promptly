@@ -160,7 +160,7 @@ export default function Dashboard() {
                 <SelectValue placeholder="Filter" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">all accounts</SelectItem>
+                <SelectItem value="all">All accounts</SelectItem>
               </SelectContent>
             </Select>
           </CardHeader>
