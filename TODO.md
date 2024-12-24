@@ -14,6 +14,7 @@
 
         ### IN PROGRESS
 
+                - DASHBOARD
                 - AUTHENTICATION(convex auth or clerk auth)
                 - PRICING(Payment integration with DPO) 
 
